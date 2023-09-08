@@ -1,0 +1,877 @@
+{
+	"info": {
+		"_postman_id": "0edf9371-1fb3-487e-b961-6fb655c3ec95",
+		"name": "BackEyes",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25452092"
+	},
+	"item": [
+		{
+			"name": "Authentication",
+			"item": [
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "saidoraby666@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123456",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{domain}}/login",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "sayed",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "saidoraby0@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123456",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{domain}}/register",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update-profile",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "amr",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "saidoraby666@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123456",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/update-profile",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"update-profile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "logout",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0L0JhY2tFeWVzX3YyL3B1YmxpYy9hcGkvbG9naW4iLCJpYXQiOjE2ODMyOTc4NTQsImV4cCI6MTY4MzMwMTQ1NCwibmJmIjoxNjgzMjk3ODU0LCJqdGkiOiJlWlFVbFFjMnY0czIyaDlZIiwic3ViIjoiMTIiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.Fd2-yXXvRYs9GGhiOwEIZDwp7Yp0rWnfe7aJccQP9io",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{domain}}/logout",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"logout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-user",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0L0JhY2tFeWVzX3YyL3B1YmxpYy9hcGkvbG9naW4iLCJpYXQiOjE2ODMyOTc4NTQsImV4cCI6MTY4MzMwMTQ1NCwibmJmIjoxNjgzMjk3ODU0LCJqdGkiOiJlWlFVbFFjMnY0czIyaDlZIiwic3ViIjoiMTIiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.Fd2-yXXvRYs9GGhiOwEIZDwp7Yp0rWnfe7aJccQP9io",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{domain}}/get-user",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"get-user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get members",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0L0JhY2tFeWVzX3YyL3B1YmxpYy9hcGkvbG9naW4iLCJpYXQiOjE2ODMyOTc4NTQsImV4cCI6MTY4MzMwMTQ1NCwibmJmIjoxNjgzMjk3ODU0LCJqdGkiOiJlWlFVbFFjMnY0czIyaDlZIiwic3ViIjoiMTIiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.Fd2-yXXvRYs9GGhiOwEIZDwp7Yp0rWnfe7aJccQP9io",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{domain}}/members",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"members"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "store member",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0L0JhY2tFeWVzX3YyL3B1YmxpYy9hcGkvbG9naW4iLCJpYXQiOjE2ODMyOTc4NTQsImV4cCI6MTY4MzMwMTQ1NCwibmJmIjoxNjgzMjk3ODU0LCJqdGkiOiJlWlFVbFFjMnY0czIyaDlZIiwic3ViIjoiMTIiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.Fd2-yXXvRYs9GGhiOwEIZDwp7Yp0rWnfe7aJccQP9io",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "member_image",
+									"type": "file",
+									"src": "/E:/Football/Erling Braut Haaland/3.jfif"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{domain}}/members",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"members"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get one member by id",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"warning": "This is a duplicate header and will be overridden by the Authorization header generated by Postman.",
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0L0JhY2tFeWVzX3YyL3B1YmxpYy9hcGkvbG9naW4iLCJpYXQiOjE2ODMyOTc4NTQsImV4cCI6MTY4MzMwMTQ1NCwibmJmIjoxNjgzMjk3ODU0LCJqdGkiOiJlWlFVbFFjMnY0czIyaDlZIiwic3ViIjoiMTIiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.Fd2-yXXvRYs9GGhiOwEIZDwp7Yp0rWnfe7aJccQP9io",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{domain}}/members/9",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"members",
+								"9"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update member",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0L0JhY2tFeWVzX3YyL3B1YmxpYy9hcGkvbG9naW4iLCJpYXQiOjE2ODMyOTc4NTQsImV4cCI6MTY4MzMwMTQ1NCwibmJmIjoxNjgzMjk3ODU0LCJqdGkiOiJlWlFVbFFjMnY0czIyaDlZIiwic3ViIjoiMTIiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.Fd2-yXXvRYs9GGhiOwEIZDwp7Yp0rWnfe7aJccQP9io",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "member_image",
+									"type": "file",
+									"src": "/E:/Football/Erling Braut Haaland/4.jfif"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{domain}}/members/9",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"members",
+								"9"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete member",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0L0JhY2tFeWVzX3YyL3B1YmxpYy9hcGkvbG9naW4iLCJpYXQiOjE2ODMyOTc4NTQsImV4cCI6MTY4MzMwMTQ1NCwibmJmIjoxNjgzMjk3ODU0LCJqdGkiOiJlWlFVbFFjMnY0czIyaDlZIiwic3ViIjoiMTIiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.Fd2-yXXvRYs9GGhiOwEIZDwp7Yp0rWnfe7aJccQP9io",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{domain}}/members/9",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"members",
+								"9"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get alerts",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0L0JhY2tFeWVzX3YyL3B1YmxpYy9hcGkvbG9naW4iLCJpYXQiOjE2ODMyOTc4NTQsImV4cCI6MTY4MzMwMTQ1NCwibmJmIjoxNjgzMjk3ODU0LCJqdGkiOiJlWlFVbFFjMnY0czIyaDlZIiwic3ViIjoiMTIiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.Fd2-yXXvRYs9GGhiOwEIZDwp7Yp0rWnfe7aJccQP9io",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{domain}}/alerts",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"alerts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "store alert",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0L0JhY2tFeWVzX3YyL3B1YmxpYy9hcGkvbG9naW4iLCJpYXQiOjE2ODMyOTc4NTQsImV4cCI6MTY4MzMwMTQ1NCwibmJmIjoxNjgzMjk3ODU0LCJqdGkiOiJlWlFVbFFjMnY0czIyaDlZIiwic3ViIjoiMTIiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.Fd2-yXXvRYs9GGhiOwEIZDwp7Yp0rWnfe7aJccQP9io",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "alert_image",
+									"type": "file",
+									"src": "/E:/Football/Erling Braut Haaland/9.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{domain}}/alerts",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"alerts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get one alert by id",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0L0JhY2tFeWVzX3YyL3B1YmxpYy9hcGkvbG9naW4iLCJpYXQiOjE2ODMyOTc4NTQsImV4cCI6MTY4MzMwMTQ1NCwibmJmIjoxNjgzMjk3ODU0LCJqdGkiOiJlWlFVbFFjMnY0czIyaDlZIiwic3ViIjoiMTIiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.Fd2-yXXvRYs9GGhiOwEIZDwp7Yp0rWnfe7aJccQP9io",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{domain}}/alerts/4",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"alerts",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update alert",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0L0JhY2tFeWVzX3YyL3B1YmxpYy9hcGkvbG9naW4iLCJpYXQiOjE2ODMyOTc4NTQsImV4cCI6MTY4MzMwMTQ1NCwibmJmIjoxNjgzMjk3ODU0LCJqdGkiOiJlWlFVbFFjMnY0czIyaDlZIiwic3ViIjoiMTIiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.Fd2-yXXvRYs9GGhiOwEIZDwp7Yp0rWnfe7aJccQP9io",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "alert_image",
+									"type": "file",
+									"src": "/E:/Football/Erling Braut Haaland/10.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{domain}}/alerts/4",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"alerts",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete alert",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0L0JhY2tFeWVzX3YyL3B1YmxpYy9hcGkvbG9naW4iLCJpYXQiOjE2ODMyOTc4NTQsImV4cCI6MTY4MzMwMTQ1NCwibmJmIjoxNjgzMjk3ODU0LCJqdGkiOiJlWlFVbFFjMnY0czIyaDlZIiwic3ViIjoiMTIiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.Fd2-yXXvRYs9GGhiOwEIZDwp7Yp0rWnfe7aJccQP9io",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{domain}}/alerts/4",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"alerts",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get places",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0L0JhY2tFeWVzX3YyL3B1YmxpYy9hcGkvbG9naW4iLCJpYXQiOjE2ODMyOTc4NTQsImV4cCI6MTY4MzMwMTQ1NCwibmJmIjoxNjgzMjk3ODU0LCJqdGkiOiJlWlFVbFFjMnY0czIyaDlZIiwic3ViIjoiMTIiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.Fd2-yXXvRYs9GGhiOwEIZDwp7Yp0rWnfe7aJccQP9io",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{domain}}/places",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"places"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "store place",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0L0JhY2tFeWVzX3YyL3B1YmxpYy9hcGkvbG9naW4iLCJpYXQiOjE2ODMyOTc4NTQsImV4cCI6MTY4MzMwMTQ1NCwibmJmIjoxNjgzMjk3ODU0LCJqdGkiOiJlWlFVbFFjMnY0czIyaDlZIiwic3ViIjoiMTIiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.Fd2-yXXvRYs9GGhiOwEIZDwp7Yp0rWnfe7aJccQP9io",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "place_image",
+									"type": "file",
+									"src": "/E:/Football/Erling Braut Haaland/7.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{domain}}/places",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"places"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get one place by id",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0L0JhY2tFeWVzX3YyL3B1YmxpYy9hcGkvbG9naW4iLCJpYXQiOjE2ODMyOTc4NTQsImV4cCI6MTY4MzMwMTQ1NCwibmJmIjoxNjgzMjk3ODU0LCJqdGkiOiJlWlFVbFFjMnY0czIyaDlZIiwic3ViIjoiMTIiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.Fd2-yXXvRYs9GGhiOwEIZDwp7Yp0rWnfe7aJccQP9io",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{domain}}/places/4",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"places",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update place",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0L0JhY2tFeWVzX3YyL3B1YmxpYy9hcGkvbG9naW4iLCJpYXQiOjE2ODMyOTc4NTQsImV4cCI6MTY4MzMwMTQ1NCwibmJmIjoxNjgzMjk3ODU0LCJqdGkiOiJlWlFVbFFjMnY0czIyaDlZIiwic3ViIjoiMTIiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.Fd2-yXXvRYs9GGhiOwEIZDwp7Yp0rWnfe7aJccQP9io",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "place_image",
+									"type": "file",
+									"src": "/E:/Football/Erling Braut Haaland/6.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{domain}}/places/4",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"places",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete place",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0L0JhY2tFeWVzX3YyL3B1YmxpYy9hcGkvbG9naW4iLCJpYXQiOjE2ODMyOTc4NTQsImV4cCI6MTY4MzMwMTQ1NCwibmJmIjoxNjgzMjk3ODU0LCJqdGkiOiJlWlFVbFFjMnY0czIyaDlZIiwic3ViIjoiMTIiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.Fd2-yXXvRYs9GGhiOwEIZDwp7Yp0rWnfe7aJccQP9io",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{domain}}/places/4",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"places",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Users",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0L0JhY2tFeWVzX3YyL3B1YmxpYy9hcGkvbG9naW4iLCJpYXQiOjE2ODMyOTc4NTQsImV4cCI6MTY4MzMwMTQ1NCwibmJmIjoxNjgzMjk3ODU0LCJqdGkiOiJlWlFVbFFjMnY0czIyaDlZIiwic3ViIjoiMTIiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.Fd2-yXXvRYs9GGhiOwEIZDwp7Yp0rWnfe7aJccQP9io",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{domain}}/user",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"user"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Verification",
+			"item": [
+				{
+					"name": "verify-code",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0L0JhY2tFeWVzX3YyL3B1YmxpYy9hcGkvbG9naW4iLCJpYXQiOjE2ODMyOTc4NTQsImV4cCI6MTY4MzMwMTQ1NCwibmJmIjoxNjgzMjk3ODU0LCJqdGkiOiJlWlFVbFFjMnY0czIyaDlZIiwic3ViIjoiMTIiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.Fd2-yXXvRYs9GGhiOwEIZDwp7Yp0rWnfe7aJccQP9io",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "code",
+									"value": "552127",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{domain}}/verify-code",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"verify-code"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "resent-verify-code",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0L0JhY2tFeWVzX3YyL3B1YmxpYy9hcGkvbG9naW4iLCJpYXQiOjE2ODMyOTc4NTQsImV4cCI6MTY4MzMwMTQ1NCwibmJmIjoxNjgzMjk3ODU0LCJqdGkiOiJlWlFVbFFjMnY0czIyaDlZIiwic3ViIjoiMTIiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.Fd2-yXXvRYs9GGhiOwEIZDwp7Yp0rWnfe7aJccQP9io",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{domain}}/resent-verify-code",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"resent-verify-code"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Reset Password",
+			"item": [
+				{
+					"name": "1-forget-password",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "saidoraby666@gmail.com",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{domain}}/forget-password",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"forget-password"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "3-reset-password",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "user_id",
+									"value": "12",
+									"type": "text"
+								},
+								{
+									"key": "token",
+									"value": "ZYmp9MrYOBK5GkQp3qx5VMYaFufZbG",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123456",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{domain}}/reset-password",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"reset-password"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "2-verify-code-reset-password",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "saidoraby666@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "code",
+									"value": "990638",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{domain}}/verify-code-reset-password",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"verify-code-reset-password"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "domain",
+			"value": "http://localhost/BackEyes_v2/public/api",
+			"type": "string"
+		},
+		{
+			"key": "token",
+			"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0L0JhY2tFeWVzX3YyL3B1YmxpYy9hcGkvbG9naW4iLCJpYXQiOjE2ODMyOTc4NTQsImV4cCI6MTY4MzMwMTQ1NCwibmJmIjoxNjgzMjk3ODU0LCJqdGkiOiJlWlFVbFFjMnY0czIyaDlZIiwic3ViIjoiMTIiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.Fd2-yXXvRYs9GGhiOwEIZDwp7Yp0rWnfe7aJccQP9io",
+			"type": "string"
+		}
+	]
+}
